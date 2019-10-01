@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>todos</title>
+      <style>
+         body {
+         font-family: "Roboto Thin", serif;
+         background-color: #f5ff0;
+         }
+         .header-title {
+         margin: 0;
+         font-size: 100px;
+         color: #CCCCCC;
+         font-style: normal;
+         font-weight: 200;
+         text-align: center;
+         }
+         .section-main_row {
+         width: 562px;
+         height: 64px;
+         }
+         .section-main_bottom-menu {
+         width: 562px;
+         height: 44px;
+         position: absolute;
+         bottom: 0;
+         }
+      </style>
+   </head>
+   <body>
+      <h1 class="header-title" role="banner" aria-label="Label todos">todos</h1>
+      <div role="" aria-label="List of results">
+         <table class = "section-main_row">
+            <tr>
+               <td width="56">
+                  <input type="image" src="icons/select-all.png" class="row_icon" role="button" aria-label="Expand the list of results">
+               </td>
+               <td>
+                  What needs to be done
+               </td>
+            </tr>
+         </table>
+         <table class="section-main_row">
+            <tr>
+               <td width="56">
+                  <input type="image" src="icons/close.png" class="row_icon">
+               </td>
+               <td>
+                  HTML
+               </td>
+            </tr>
+         </table>
+         <table class="section-main_row">
+            <tr>
+               <td width="56">
+                  <input type="image" src="icons/close.png" class="row_icon" >
+               </td>
+               <td>
+                  CSS
+               </td>
+            </tr>
+         </table>
+         <table class="section-main_row">
+            <tr>
+               <td width="56">
+                  <input type="image" src="icons/close.png" class="row_icon" >
+               </td>
+               <td>
+                  JS
+               </td>
+            </tr>
+         </table>
+         <table class="section-main_row">
+            <tr>
+               <td width="56">
+                  <input type="image" src="icons/close.png" class="row_icon" >
+               </td>
+               <td>
+                  JS tools
+               </td>
+            </tr>
+         </table>
+      </div>
+      <span id="items-counter" class="section-main_bottom-menu_text">3 items left</span>
+      <button id="AllButton" class="section-main_bottom-menu-button">All</button>
+      <button id="ActiveButton" class="section-main_bottom-menu-button">Active</button>
+      <button id="CompletedButton" class="section-main_bottom-menu-button">Completed</button>
+      <button id="status" class="section-main_bottom-menu-button">Clear completed</button>
+      </div>
+      </div>
+      </div>
+      </div>
+   </body>
+</html>
