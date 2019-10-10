@@ -1,95 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>todos</title>
-      <style>
-         body {
-         font-family: "Roboto Thin", serif;
-         background-color: #f5ff0;
-         }
-         .header-title {
-         margin: 0;
-         font-size: 100px;
-         color: #CCCCCC;
-         font-style: normal;
-         font-weight: 200;
-         text-align: center;
-         }
-         .section-main_row {
-         width: 562px;
-         height: 64px;
-         }
-         .section-main_bottom-menu {
-         width: 562px;
-         height: 44px;
-         position: absolute;
-         bottom: 0;
-         }
-      </style>
-   </head>
-   <body>
-      <h1 class="header-title" role="banner" aria-label="Label todos">todos</h1>
-      <div role="" aria-label="List of results">
-         <table class = "section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/select-all.png" class="row_icon" role="button" aria-label="Expand the list of results">
-               </td>
-               <td>
-                  What needs to be done
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon">
-               </td>
-               <td>
-                  HTML
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  CSS
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  JS
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  JS tools
-               </td>
-            </tr>
-         </table>
-      </div>
-      <span id="items-counter" class="section-main_bottom-menu_text">3 items left</span>
-      <button id="AllButton" class="section-main_bottom-menu-button">All</button>
-      <button id="ActiveButton" class="section-main_bottom-menu-button">Active</button>
-      <button id="CompletedButton" class="section-main_bottom-menu-button">Completed</button>
-      <button id="status" class="section-main_bottom-menu-button">Clear completed</button>
-      </div>
-      </div>
-      </div>
-      </div>
-   </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      todos
+    </title>
+    <style>
+      li {
+        list-style-type: none;
+      }
+      ul {
+        padding-left: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="todo-app">
+      <header class="todo-app__header">
+        <h1 class="header-title">todos</h1>
+      </header>
+
+      <main class="todo-app__frame">
+        <section class="todo-app__frame-main-control">
+          <span class="main-control__select-all">
+            <button class="main-control__select-all-button">Select all</button>
+          </span>
+          <span class="main-control__create-new">
+            <input
+              class="main-control__add-new-input"
+              type="text"
+              aria-label="main-control__add-new-item"
+              placeholder="What needs to be done?"
+              autofocus="autofocus"
+            />
+          </span>
+        </section>
+
+        <section class="todo-app__frame-tasks">
+          <ul class="tasks-list">
+            <li class="tasks-list__item">
+              <div class="item__view">
+                <label class="item__view-status">
+                  <input type="checkbox" class="item__view-status" aria-label="Completed task: HTML" />
+                  <textarea class="item__view-content" aria-label="item__content: HTML" cols="40" rows="1">HTML</textarea>
+                </label>
+                <button class="item__view-delete-button">Delete task</button>
+              </div>
+            </li>
+
+            <li class="tasks-list__item item">
+              <div class="item__view">
+                <label class="item__view-status">
+                  <input type="checkbox" class="item__view-status" aria-label="Completed task: CSS" />
+                  <textarea class="item__view-content" aria-label="item__content: CSS" cols="40" rows="1">CSS</textarea>
+                </label>
+                <button class="item__view-delete-button">Delete task</button>
+              </div>
+            </li>
+
+            <li class="tasks-list__item item">
+              <div class="item__view">
+                <label class="item__view-status">
+                  <input type="checkbox" class="item__view-status" aria-label="Completed task: JS" />
+                  <textarea class="item__view-content" aria-label="item__content: JS" cols="40" rows="1">JSsaflha</textarea>
+                </label>
+                <button class="item__view-delete-button">Delete task</button>
+              </div>
+            </li>
+
+            <li class="tasks-list__item item">
+              <div class="item__view">
+                <label class="item__view-status">
+                  <input type="checkbox" class="item__view-status" aria-label="Completed task: JStools" />
+                  <textarea class="item__view-content" aria-label="item__content: JStools" cols="40" rows="1">JStools</textarea>
+                </label>
+                <button class="item__view-delete-button">Delete task</button>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+        <section class="todo-app__frame-actions-bar">
+          <span class="task-counter">3 items left</span>
+
+          <span class="task-filter" role="group" aria-label="Filter tasks by status">
+            <label class="task-filter__item">
+              <input class="task-filter__input" type="radio" name="filter" checked="checked" value="All" />
+              <span class="task-filter__text" aria-label="Select all tasks">All</span>
+            </label>
+
+            <label class="task-filter__item">
+              <input class="task-filter__input" type="radio" name="filter" value="Active" />
+              <span class="task-filter__text" aria-label="Select active tasks">Active</span>
+            </label>
+
+            <label class="task-filter__item">
+              <input class="task-filter__input" type="radio" name="filter" value="Completed" />
+              <span class="task-filter__text" aria-label="Select completed tasks">Completed</span>
+            </label>
+          </span>
+          <span class="task-cleaner">
+            <button class="task-cleaner__clear-completed">Clear completed</button>
+          </span>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
+
