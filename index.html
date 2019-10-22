@@ -1,111 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <title>
-      todos
+        todos
     </title>
-    <style>
-      li {
-        list-style-type: none;
-      }
-      ul {
-        padding-left: 0;
-      }
-    </style>
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/default.css">
+</head>
 
-  <body>
-    <div class="todo-app">
-      <header class="todo-app__header">
+<body>
+<div class="wrapper">
+    <header class="wrapper__header">
         <h1 class="header-title">todos</h1>
-      </header>
+    </header>
+    <main class="todo-app">
+        <div class="rectangles-wrapper">
+            <div class="rectangle-decorative2"></div>
+            <div class="rectangle-decorative1"></div>
+            <div class="rectangle">
+                <div class="content">
+                    <section class="content__main-control">
+                        <div class="main-actions">
+                            <button class="main-actions__check-all" type="button" aria-label="Check all">
+                                <svg class="check-all-tick">
+                                    <polyline points="13,20 25,30 37,20" />
+                                </svg>
+                            </button>
+                            <input class="main-actions__entry-text" type="text" placeholder="What needs to be done?" id="entry-text" />
+                            <label class="entry-text__label" for="entry-text"></label>
+                        </div>
+                    </section>
 
-      <main class="todo-app__frame">
-        <section class="todo-app__frame-main-control">
-          <span class="main-control__select-all">
-            <button class="main-control__select-all-button">Select all</button>
-          </span>
-          <span class="main-control__create-new">
-            <input
-              class="main-control__add-new-input"
-              type="text"
-              aria-label="main-control__add-new-item"
-              placeholder="What needs to be done?"
-              autofocus="autofocus"
-            />
-          </span>
-        </section>
+                    <section class="content__main-section tasks">
+                        <ul class="tasks">
 
-        <section class="todo-app__frame-tasks">
-          <ul class="tasks-list">
-            <li class="tasks-list__item">
-              <div class="item__view">
-                <label class="item__view-status">
-                  <input type="checkbox" class="item__view-status" aria-label="Completed task: HTML" />
-                  <textarea class="item__view-content" aria-label="item__content: HTML" cols="40" rows="1">HTML</textarea>
-                </label>
-                <button class="item__view-delete-button">Delete task</button>
-              </div>
-            </li>
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox1"/>
+                                <label class="input-task" for="task-checkbox1">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">HTML</div>
 
-            <li class="tasks-list__item item">
-              <div class="item__view">
-                <label class="item__view-status">
-                  <input type="checkbox" class="item__view-status" aria-label="Completed task: CSS" />
-                  <textarea class="item__view-content" aria-label="item__content: CSS" cols="40" rows="1">CSS</textarea>
-                </label>
-                <button class="item__view-delete-button">Delete task</button>
-              </div>
-            </li>
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
 
-            <li class="tasks-list__item item">
-              <div class="item__view">
-                <label class="item__view-status">
-                  <input type="checkbox" class="item__view-status" aria-label="Completed task: JS" />
-                  <textarea class="item__view-content" aria-label="item__content: JS" cols="40" rows="1">JSsaflha</textarea>
-                </label>
-                <button class="item__view-delete-button">Delete task</button>
-              </div>
-            </li>
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox2"/>
+                                <label class="input-task" for="task-checkbox2">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">CSS</div>
 
-            <li class="tasks-list__item item">
-              <div class="item__view">
-                <label class="item__view-status">
-                  <input type="checkbox" class="item__view-status" aria-label="Completed task: JStools" />
-                  <textarea class="item__view-content" aria-label="item__content: JStools" cols="40" rows="1">JStools</textarea>
-                </label>
-                <button class="item__view-delete-button">Delete task</button>
-              </div>
-            </li>
-          </ul>
-        </section>
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
 
-        <section class="todo-app__frame-actions-bar">
-          <span class="task-counter">3 items left</span>
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox3"/>
+                                <label class="input-task" for="task-checkbox3">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">JS</div>
 
-          <span class="task-filter" role="group" aria-label="Filter tasks by status">
-            <label class="task-filter__item">
-              <input class="task-filter__input" type="radio" name="filter" checked="checked" value="All" />
-              <span class="task-filter__text" aria-label="Select all tasks">All</span>
-            </label>
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
 
-            <label class="task-filter__item">
-              <input class="task-filter__input" type="radio" name="filter" value="Active" />
-              <span class="task-filter__text" aria-label="Select active tasks">Active</span>
-            </label>
-
-            <label class="task-filter__item">
-              <input class="task-filter__input" type="radio" name="filter" value="Completed" />
-              <span class="task-filter__text" aria-label="Select completed tasks">Completed</span>
-            </label>
-          </span>
-          <span class="task-cleaner">
-            <button class="task-cleaner__clear-completed">Clear completed</button>
-          </span>
-        </section>
-      </main>
-    </div>
-  </body>
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox4"/>
+                                <label class="input-task" for="task-checkbox4">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">JStools</div>
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="content__extra-actions">
+                    <div class="sort-menu">
+                        <div class="sort-menu__items-left">3 items left</div>
+                        <div class="sort-menu__filter-buttons" role="group">
+                            <input class="filter-buttons__radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
+                            <label class="filter-button" for="all-checkbox">
+                                <span class="filter-buttons__text">All</span>
+                            </label>
+                            <input class="filter-buttons__radio" id="active-checkbox" type="radio" name="filters" value="Active" />
+                            <label class="filter-button" for="active-checkbox">
+                                <span class="filter-buttons__text">Active</span>
+                            </label>
+                            <input class="filter-buttons__radio" id="completed-checkbox" type="radio" name="filters" value="Completed" />
+                            <label class="filter-button" for="completed-checkbox">
+                                <span class="filter-buttons__text">Completed</span>
+                            </label>
+                        </div>
+                        <button class="sort-menu__clear-completed-button" type="button">Clear completed</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
 </html>
-

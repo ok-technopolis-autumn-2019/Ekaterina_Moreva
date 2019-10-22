@@ -1,0 +1,79 @@
+.sort-menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-buttons__text {
+    padding: 0 5px 0 5px;
+    background-color: transparent;
+    border: solid 1px transparent;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.sort-menu__items-left {
+    padding: 3px 5px;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.sort-menu__filter-buttons {
+    padding: 2px;
+}
+
+.filter-button {
+    border: solid 1px transparent;
+    padding: 0 0 0 2px;
+    cursor: pointer;
+}
+
+.filter-buttons__radio {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: -9999px;
+}
+
+.filter-buttons__radio:checked + .filter-button {
+    color: #505050;
+    border: solid 1px #AFAFAF;
+    border-radius: 4px;
+}
+
+.filter-buttons__radio:focus + .filter-button {
+    color: #505050;
+    border: solid 1px #505050;
+    outline: solid 2px #C0C0C0;
+    border-radius: 4px;
+}
+.filter-buttons__radio:hover + .filter-button {
+    color: #505050;
+    border: solid 1px #505050;
+    border-radius: 4px;
+}
+
+.sort-menu__clear-completed-button {
+    background-color: transparent;
+    border: solid 1px transparent;
+    border-radius: 4px;
+    color: #505050;
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.sort-menu__clear-completed-button:hover {
+    color: #505050;
+    border: solid 1px #505050;
+    border-radius: 4px;
+}
+.sort-menu__clear-completed-button:focus {
+    color: #505050;
+    outline: solid 2px #C0C0C0;
+    border: solid 1px #505050;
+    border-radius: 4px;
+}
