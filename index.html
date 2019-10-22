@@ -1,95 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>todos</title>
-      <style>
-         body {
-         font-family: "Roboto Thin", serif;
-         background-color: #f5ff0;
-         }
-         .header-title {
-         margin: 0;
-         font-size: 100px;
-         color: #CCCCCC;
-         font-style: normal;
-         font-weight: 200;
-         text-align: center;
-         }
-         .section-main_row {
-         width: 562px;
-         height: 64px;
-         }
-         .section-main_bottom-menu {
-         width: 562px;
-         height: 44px;
-         position: absolute;
-         bottom: 0;
-         }
-      </style>
-   </head>
-   <body>
-      <h1 class="header-title" role="banner" aria-label="Label todos">todos</h1>
-      <div role="" aria-label="List of results">
-         <table class = "section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/select-all.png" class="row_icon" role="button" aria-label="Expand the list of results">
-               </td>
-               <td>
-                  What needs to be done
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon">
-               </td>
-               <td>
-                  HTML
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  CSS
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  JS
-               </td>
-            </tr>
-         </table>
-         <table class="section-main_row">
-            <tr>
-               <td width="56">
-                  <input type="image" src="icons/close.png" class="row_icon" >
-               </td>
-               <td>
-                  JS tools
-               </td>
-            </tr>
-         </table>
-      </div>
-      <span id="items-counter" class="section-main_bottom-menu_text">3 items left</span>
-      <button id="AllButton" class="section-main_bottom-menu-button">All</button>
-      <button id="ActiveButton" class="section-main_bottom-menu-button">Active</button>
-      <button id="CompletedButton" class="section-main_bottom-menu-button">Completed</button>
-      <button id="status" class="section-main_bottom-menu-button">Clear completed</button>
-      </div>
-      </div>
-      </div>
-      </div>
-   </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>
+        todos
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/default.css">
+</head>
+
+<body>
+<div class="wrapper">
+    <header class="wrapper__header">
+        <h1 class="header-title">todos</h1>
+    </header>
+    <main class="todo-app">
+        <div class="rectangles-wrapper">
+            <div class="rectangle-decorative2"></div>
+            <div class="rectangle-decorative1"></div>
+            <div class="rectangle">
+                <div class="content">
+                    <section class="content__main-control">
+                        <div class="main-actions">
+                            <button class="main-actions__check-all" type="button" aria-label="Check all">
+                                <svg class="check-all-tick">
+                                    <polyline points="13,20 25,30 37,20" />
+                                </svg>
+                            </button>
+                            <input class="main-actions__entry-text" type="text" placeholder="What needs to be done?" id="entry-text" />
+                            <label class="entry-text__label" for="entry-text"></label>
+                        </div>
+                    </section>
+
+                    <section class="content__main-section tasks">
+                        <ul class="tasks">
+
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox1"/>
+                                <label class="input-task" for="task-checkbox1">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">HTML</div>
+
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
+
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox2"/>
+                                <label class="input-task" for="task-checkbox2">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">CSS</div>
+
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
+
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox3"/>
+                                <label class="input-task" for="task-checkbox3">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">JS</div>
+
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
+
+                            <li class="content-tasks__task">
+                                <input type="checkbox" class="input-task__task-checkbox" id="task-checkbox4"/>
+                                <label class="input-task" for="task-checkbox4">
+                                    <svg class="checkbox-svg">
+                                        <circle cx="25" cy="25" r="18" />
+                                        <polyline class="checked-tick" points="15,25 24,33 36,19" />
+                                    </svg>
+                                </label>
+                                <div class="input-task__task-text">JStools</div>
+                                <button class="content-tasks__delete-task">
+                                    <svg class="cross">
+                                        <line x1="15" y1="15" x2="35" y2="35" />
+                                        <line x1="15" y1="35" x2="35" y2="15" />
+                                    </svg>
+                                </button>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+                <section class="content__extra-actions">
+                    <div class="sort-menu">
+                        <div class="sort-menu__items-left">3 items left</div>
+                        <div class="sort-menu__filter-buttons" role="group">
+                            <input class="filter-buttons__radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
+                            <label class="filter-button" for="all-checkbox">
+                                <span class="filter-buttons__text">All</span>
+                            </label>
+                            <input class="filter-buttons__radio" id="active-checkbox" type="radio" name="filters" value="Active" />
+                            <label class="filter-button" for="active-checkbox">
+                                <span class="filter-buttons__text">Active</span>
+                            </label>
+                            <input class="filter-buttons__radio" id="completed-checkbox" type="radio" name="filters" value="Completed" />
+                            <label class="filter-button" for="completed-checkbox">
+                                <span class="filter-buttons__text">Completed</span>
+                            </label>
+                        </div>
+                        <button class="sort-menu__clear-completed-button" type="button">Clear completed</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
 </html>
