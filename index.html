@@ -14,20 +14,15 @@
     <header class="wrapper__header">
         <h1 class="header-title">todos</h1>
     </header>
-    <main class="todo-app">
-        <div class="rectangles-wrapper">
-            <div class="rectangle-decorative2"></div>
-            <div class="rectangle-decorative1"></div>
-            <div class="rectangle">
-                <div class="content">
-                    <section class="content__main-control">
-                        <div class="main-actions">
+    <main class="content">
+        <section class="content__main-control">
+            <div class="main-actions">
                             <button class="main-actions__check-all" type="button" aria-label="Check all">
                                 <svg class="check-all-tick">
                                     <polyline points="13,20 25,30 37,20" />
                                 </svg>
                             </button>
-                            <input class="main-actions__entry-text" type="text" placeholder="What needs to be done?" id="entry-text" />
+                            <input class="main-actions__entry-text" type="text" placeholder="What needs to be done?" id="entry-text" autofocus="autofocus" />
                             <label class="entry-text__label" for="entry-text"></label>
                         </div>
                     </section>
@@ -107,9 +102,8 @@
                             </li>
                         </ul>
                     </section>
-                </div>
-                <section class="content__extra-actions">
-                    <div class="sort-menu">
+
+                <section class="content__extra-actions sort-menu">
                         <div class="sort-menu__items-left">3 items left</div>
                         <div class="sort-menu__filter-buttons" role="group">
                             <input class="filter-buttons__radio" id="all-checkbox" type="radio" name="filters" checked="checked" value="All" />
@@ -125,11 +119,10 @@
                                 <span class="filter-buttons__text">Completed</span>
                             </label>
                         </div>
-                        <button class="sort-menu__clear-completed-button" type="button">Clear completed</button>
-                    </div>
+                            <div class="sort-menu__clear-completed" >
+                            <button class="sort-menu__clear-completed-button" type="button">Clear completed</button>
+                            </div>
                 </section>
-            </div>
-        </div>
     </main>
 </div>
 </body>

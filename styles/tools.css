@@ -1,6 +1,12 @@
-.sort-menu {
+.content__extra-actions{
+    border: 1px #d3d3d3;
+    border-style: solid none none none;
+    background-color: transparent;
+    position: sticky;
     display: flex;
     justify-content: space-between;
+    bottom: 2px;
+    padding: 5px 0 0 0
 }
 
 .filter-buttons__text {
@@ -57,6 +63,7 @@
 }
 
 .sort-menu__clear-completed-button {
+
     background-color: transparent;
     border: solid 1px transparent;
     border-radius: 4px;
