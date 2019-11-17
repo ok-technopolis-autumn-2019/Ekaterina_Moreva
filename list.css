@@ -1,0 +1,30 @@
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  min-width: 462px;
+  max-width: 560px; }
+
+.wrapper:before {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  height: 6px;
+  left: 2px;
+  right: 2px;
+  z-index: -1;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+/*# sourceMappingURL=list.css.map */

@@ -1,0 +1,86 @@
+@import "vars";
+@import "mixins";
+
+.content__extra-actions{
+  border: $border_width $lightgrey;
+  border-style: solid none none none;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  bottom: 2px;
+  padding: 5px 0 0 0;
+  background-color: transparent;
+}
+.filter-buttons__text{
+  padding: 0 5px 0 5px;
+  border: solid $border_width transparent;
+  color: $dark_grey;
+  background-color: transparent;
+  @include textFont;
+  font-size: $filter_buttons_text_size;
+}
+.sort-menu__items-left{
+  padding: 3px 5px;
+  color: $dark_grey;
+  @include textFont();
+  font-size: $filter_buttons_text_size;
+  cursor: default;
+}
+
+.sort-menu__filter-buttons{
+  padding: 2px;
+}
+
+.filter-button{
+  border: solid $border_width transparent;
+  padding: 0 0 0 2px;
+  cursor: $cursor_pointer;
+}
+
+.filter-buttons__radio{
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -9999px;
+}
+
+.filter-buttons__radio:checked + .filter-button {
+  color: $dark_grey;
+  border: solid $border_width $fb_checked_border_grey;
+  border-radius: $border_radius;
+}
+
+.filter-buttons__radio:focus + .filter-button {
+  outline: solid $focus_border_width $outline_grey;
+  @include  filterButtons();
+}
+.filter-buttons__radio:hover + .filter-button {
+  @include filterButtons();
+}
+
+.filter-buttons__radio:active +.filter-button:active {
+  background-color: $content_border_cl;
+}
+
+.sort-menu__clear-completed-button {
+  background-color: transparent;
+  border: solid $border_width transparent;
+  border-radius: $border_radius;
+  color: $dark_grey;
+  @include textFont();
+  font-size: $filter_buttons_text_size;
+  padding: 3px 5px 3px 3px;
+}
+
+.sort-menu__clear-completed-button:hover {
+  @include filterButtons();
+}
+
+.sort-menu__clear-completed-button:focus {
+  outline: solid $focus_border_width $outline_grey;
+  @include filterButtons();
+}
+
+.sort-menu__clear-completed-button:active {
+  background-color: $content_border_cl;
+}

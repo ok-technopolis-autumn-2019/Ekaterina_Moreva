@@ -1,0 +1,316 @@
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+body {
+  display: flex;
+  background: #F5F5F5; }
+
+button:hover {
+  cursor: pointer; }
+
+li {
+  list-style-type: none; }
+
+ul {
+  padding: 0 0 0 0;
+  margin: 0 0 85px 0; }
+
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+.header-title {
+  text-align: center;
+  font-family: Roboto, serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 100px;
+  line-height: 21px;
+  color: #CCCCCC;
+  cursor: default; }
+
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+.content__extra-actions {
+  border: 1px #D3D3D3;
+  border-style: solid none none none;
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  bottom: 2px;
+  padding: 5px 0 0 0;
+  background-color: transparent; }
+
+.filter-buttons__text {
+  padding: 0 5px 0 5px;
+  border: solid 1px transparent;
+  color: #505050;
+  background-color: transparent;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 14px; }
+
+.sort-menu__items-left {
+  padding: 3px 5px;
+  color: #505050;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  cursor: default; }
+
+.sort-menu__filter-buttons {
+  padding: 2px; }
+
+.filter-button {
+  border: solid 1px transparent;
+  padding: 0 0 0 2px;
+  cursor: pointer; }
+
+.filter-buttons__radio {
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: -9999px; }
+
+.filter-buttons__radio:checked + .filter-button {
+  color: #505050;
+  border: solid 1px #AFAFAF;
+  border-radius: 4px; }
+
+.filter-buttons__radio:focus + .filter-button {
+  outline: solid 2px #C0C0C0;
+  color: #505050;
+  border: solid 1px #505050;
+  border-radius: 4px; }
+
+.filter-buttons__radio:hover + .filter-button {
+  color: #505050;
+  border: solid 1px #505050;
+  border-radius: 4px; }
+
+.filter-buttons__radio:active + .filter-button:active {
+  background-color: #F0F0F0; }
+
+.sort-menu__clear-completed-button {
+  background-color: transparent;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  color: #505050;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  padding: 3px 5px 3px 3px; }
+
+.sort-menu__clear-completed-button:hover {
+  color: #505050;
+  border: solid 1px #505050;
+  border-radius: 4px; }
+
+.sort-menu__clear-completed-button:focus {
+  outline: solid 2px #C0C0C0;
+  color: #505050;
+  border: solid 1px #505050;
+  border-radius: 4px; }
+
+.sort-menu__clear-completed-button:active {
+  background-color: #F0F0F0; }
+
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+/*colors*/
+/*parameters*/
+/*action*/
+/*prop*/
+/*texts*/
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  min-width: 462px;
+  max-width: 560px; }
+
+.wrapper:before {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  height: 6px;
+  left: 2px;
+  right: 2px;
+  z-index: -1;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+.wrapper:after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  height: 12px;
+  left: 4px;
+  right: 4px;
+  z-index: -2;
+  background-color: #FFFFFF;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+.content {
+  min-width: 462px;
+  max-width: 560px;
+  min-height: 404px;
+  max-height: 400px;
+  background-color: #FFFFFF;
+  border: solid 1px #F0F0F0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); }
+
+.main-actions {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border-bottom: solid 1px #D3D3D3; }
+
+.main-actions__check-all {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  background-image: url(images/select.svg);
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  padding: 0; }
+
+.main-actions__check-all:hover {
+  outline: solid 2px #C0C0C0; }
+
+.main-actions__check-all:focus {
+  outline: solid 2px #C0C0C0; }
+
+.main-actions__check-all:active {
+  background-color: #F0F0F0; }
+
+.main-actions__entry-text:focus {
+  outline: solid 2px #C0C0C0; }
+
+.main-actions__entry-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: #505050;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  padding: 3px;
+  margin: 0 0 0 2px; }
+
+.main-actions__entry-text::placeholder {
+  color: #AFAFAF;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: 22px; }
+
+.content__tasks {
+  list-style-type: none;
+  margin: 0 0 50px 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+  font-weight: 300; }
+
+.content-tasks__task {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px #D3D3D3;
+  padding: 3px;
+  word-break: break-word; }
+
+.content-tasks__task:hover {
+  background-color: #F0F0F0; }
+
+.checkbox-svg {
+  margin: 0 3px 0 0;
+  width: 50px;
+  height: 50px;
+  stroke: #D3D3D3;
+  fill: none; }
+
+.checked-tick {
+  stroke: none;
+  stroke-width: 2px; }
+
+.input-task__task-checkbox:focus + .input-task .checkbox-svg {
+  stroke: #C0C0C0;
+  stroke-width: 1px; }
+
+.input-task:hover {
+  stroke: #C0C0C0;
+  stroke-width: 1px; }
+
+.input-task__task-checkbox:checked + .input-task .checkbox-svg .checked-tick,
+.input-task__task-checkbox:checked + .input-task .checkbox-svg {
+  stroke: #008000; }
+
+.input-task {
+  display: flex;
+  align-items: center;
+  cursor: pointer; }
+
+.input-task__task-checkbox {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -1000px; }
+
+.input-task__task-text {
+  flex: 1;
+  fill: none;
+  color: #505050;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
+  font-size: 22px; }
+
+.input-task__task-checkbox:checked ~ .input-task__task-text {
+  color: #808080;
+  text-decoration: line-through; }
+
+.content-tasks__delete-task {
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0; }
+
+.cross {
+  width: 50px;
+  height: 50px;
+  stroke-width: 2px;
+  stroke: none; }
+
+.content-tasks__delete-task:focus {
+  outline: solid 2px #C0C0C0; }
+
+.content-tasks__delete-task:focus .cross {
+  stroke: #D3D3D3; }
+
+.content-tasks__task:hover .content-tasks__delete-task .cross {
+  stroke: #D3D3D3; }
+
+.content-tasks__task:hover .content-tasks__delete-task:hover .cross {
+  stroke: #808080; }
+
+.content-tasks__task:hover .content-tasks__delete-task:active .cross {
+  stroke: #000000; }
+
+/*# sourceMappingURL=style.css.map */
