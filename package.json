@@ -1,0 +1,24 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "dependencies": {},
+  "description": "\"\"",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ok-technopolis-autumn-2019/Ekaterina_Moreva.git"
+  },
+  "keywords": [
+    "[]"
+  ],
+  "author": "KateMoreva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ok-technopolis-autumn-2019/Ekaterina_Moreva/issues"
+  },
+  "homepage": "https://github.com/ok-technopolis-autumn-2019/Ekaterina_Moreva#readme"
+}

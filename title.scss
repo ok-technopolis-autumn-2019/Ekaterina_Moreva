@@ -1,0 +1,12 @@
+@import "vars";
+
+.header-title {
+  text-align: center;
+  font-family: $title_family_text;
+  font-style: normal;
+  font-weight: 100;
+  font-size: $title_size_text;
+  line-height: $title_line_height;
+  color: $title_text_color;
+  cursor: default;
+}

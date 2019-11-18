@@ -1,0 +1,186 @@
+@import "vars";
+@import "mixins";
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+  min-width: $content_min_wight;
+  max-width: $content_max_wight;
+}
+
+.wrapper:before {
+  @include wrapperBefore();
+}
+
+.wrapper:after{
+  @include wrapperAfter();
+}
+
+.content{
+  min-width: $content_min_wight;
+  max-width: $content_max_wight;
+  min-height: $content_min_high;
+  max-height: $content_max_high;
+  background-color: $p_white;
+  border: solid $border_width $content_border_cl;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.main-actions{
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  border-bottom: solid $border_width $lightgrey;
+}
+
+.main-actions__check-all {
+  width: $check_delete_el_wight;
+  height: $check_delete_el_high;
+  text-align: center;
+  border: none;
+  background-image: url(images/select.svg);
+  background-position: center;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.main-actions__check-all:hover{
+  outline: solid $focus_border_width $outline_grey;
+}
+
+.main-actions__check-all:focus{
+  outline: solid $focus_border_width $outline_grey;
+}
+.main-actions__check-all:active {
+  background-color: $content_border_cl;
+}
+
+.main-actions__entry-text:focus{
+  outline: solid $focus_border_width $outline_grey;
+}
+.main-actions__entry-text {
+  flex: 1;
+  border: none;
+  outline: none;
+  color: $dark_grey;
+  @include textFont();
+  padding: 3px;
+  margin: 0 0 0 2px;
+}
+
+.main-actions__entry-text::placeholder {
+  color: $fb_checked_border_grey;
+  @include textFont();
+  font-style: italic;
+  font-size: $placeholder_text_size;
+}
+
+.content__tasks {
+  list-style-type: none;
+  margin: 0 0 50px 0;
+  padding: 0;
+  @include textFont();
+}
+
+.content-tasks__task {
+  display: flex;
+  align-items: center;
+  border-bottom: solid $border_width $lightgrey;
+  padding: 3px;
+  word-break: break-word;
+}
+
+.content-tasks__task:hover {
+  background-color: $content_border_cl;
+}
+
+.checkbox-svg {
+  margin: 0 3px 0 0;
+  width: $check_delete_el_wight;
+  height: $check_delete_el_high;
+  stroke: $lightgrey;
+  fill: none;
+}
+
+.checked-tick {
+  stroke: none;
+  stroke-width: 2px;
+}
+
+.input-task__task-checkbox:focus + .input-task .checkbox-svg {
+  stroke: $outline_grey;
+  stroke-width: $border_width;
+}
+.input-task:hover{
+  stroke: $outline_grey;
+  stroke-width: $border_width;
+}
+
+.input-task__task-checkbox:checked + .input-task .checkbox-svg .checked-tick,
+.input-task__task-checkbox:checked + .input-task .checkbox-svg {
+  stroke: $check_green;
+}
+
+.input-task {
+  display: flex;
+  align-items: center;
+  cursor: $cursor_pointer;
+}
+
+.input-task__task-checkbox {
+  width: $check_delete_el_wight;
+  height: $check_delete_el_high;
+  position: absolute;
+  left: -1000px;
+}
+
+.input-task__task-text {
+  flex: 1;
+  fill: none;
+  color: $dark_grey;
+  @include textFont();
+  font-size: $placeholder_text_size;
+}
+
+.input-task__task-checkbox:checked ~ .input-task__task-text {
+  color: $p_grey;
+  text-decoration: line-through;
+}
+
+.content-tasks__delete-task {
+  width: $check_delete_el_wight;
+  height: $check_delete_el_high;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  font-size: 0;
+}
+
+.cross {
+  width: $check_delete_el_wight;
+  height: $check_delete_el_high;
+  stroke-width: $focus_border_width;
+  stroke: none;
+}
+.content-tasks__delete-task:focus{
+  outline: solid $focus_border_width $outline_grey;
+}
+
+.content-tasks__delete-task:focus .cross {
+  stroke: $lightgrey;
+}
+
+.content-tasks__task:hover .content-tasks__delete-task .cross {
+  stroke: $lightgrey;
+}
+
+.content-tasks__task:hover .content-tasks__delete-task:hover .cross {
+  stroke: $p_grey;
+}
+
+.content-tasks__task:hover .content-tasks__delete-task:active .cross{
+  stroke: $p_black;
+}
